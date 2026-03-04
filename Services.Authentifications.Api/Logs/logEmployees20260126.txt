@@ -1,0 +1,32 @@
+[11:58:38.934] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - null null
+[11:58:39.053] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - null null
+[11:58:39.090] [] [Information] CORS policy execution successful.
+[11:58:39.090] [] [Information] CORS policy execution successful.
+[11:58:39.097] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - 204 null null 44.1059ms
+[11:58:39.097] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - 204 null null 163.1384ms
+[11:58:39.139] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - null null
+[11:58:39.139] [] [Information] CORS policy execution successful.
+[11:58:39.140] [] [Information] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '22.01.2026 11:23:55', Current time (UTC): '26.01.2026 09:58:39'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+[11:58:39.141] [] [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '22.01.2026 11:23:55', Current time (UTC): '26.01.2026 09:58:39'."
+[11:58:39.141] [] [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+Handler assertion should evaluate to true."
+[11:58:39.142] [] [Information] AuthenticationScheme: "Bearer" was challenged.
+[11:58:39.143] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - 401 0 null 3.5747ms
+[11:58:39.204] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - null null
+[11:58:39.204] [] [Information] CORS policy execution successful.
+[11:58:39.211] [] [Information] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '22.01.2026 11:23:55', Current time (UTC): '26.01.2026 09:58:39'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+[11:58:39.211] [] [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '22.01.2026 11:23:55', Current time (UTC): '26.01.2026 09:58:39'."
+[11:58:39.212] [] [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+Handler assertion should evaluate to true."
+[11:58:39.212] [] [Information] AuthenticationScheme: "Bearer" was challenged.
+[11:58:39.212] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - 401 0 null 8.241ms

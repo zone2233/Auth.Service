@@ -1,0 +1,344 @@
+[13:20:47.777] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - null null
+[13:20:47.828] [] [Information] CORS policy execution successful.
+[13:20:47.829] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - 204 null null 51.8911ms
+[13:20:47.831] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - null null
+[13:20:47.831] [] [Information] CORS policy execution successful.
+[13:20:47.835] [] [Information] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '04.11.2025 11:31:12', Current time (UTC): '05.11.2025 11:20:47'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+[13:20:47.838] [] [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '04.11.2025 11:31:12', Current time (UTC): '05.11.2025 11:20:47'."
+[13:20:47.840] [] [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+Handler assertion should evaluate to true."
+[13:20:47.841] [] [Information] AuthenticationScheme: "Bearer" was challenged.
+[13:20:47.841] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - 401 0 null 10.3359ms
+[13:21:13.021] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/login""" - null null
+[13:21:13.021] [] [Information] CORS policy execution successful.
+[13:21:13.021] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/login""" - 204 null null 0.8039ms
+[13:21:13.052] [] [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7213""""/login""" - "application/json" 70
+[13:21:13.053] [] [Information] CORS policy execution successful.
+[13:21:13.054] [] [Information] Executing endpoint '"HTTP: POST login"'
+[13:21:14.748] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.772] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.776] [] [Debug] Beginning transaction with isolation level '"Unspecified"'.
+[13:21:14.778] [] [Debug] Began transaction with isolation level '"ReadCommitted"'.
+[13:21:14.783] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:21:14.783] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:21:14.783] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:21:14.783] [] [Debug] Executing DbCommand [Parameters=["@__loginRequest_Username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginRequest_Username_0"
+[13:21:14.790] [] [Information] Executed DbCommand ("7"ms) [Parameters=["@__loginRequest_Username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginRequest_Username_0"
+[13:21:14.792] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[13:21:14.793] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.793] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 1ms reading results.
+[13:21:14.794] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.802] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.802] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:21:14.803] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:21:14.803] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:21:14.803] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:14.807] [] [Information] Executed DbCommand ("4"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:14.808] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[13:21:14.808] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.809] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:21:14.809] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.809] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:21:14.809] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.810] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.810] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:21:14.810] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:21:14.810] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:21:14.810] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:14.811] [] [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:14.812] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[13:21:14.812] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.812] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:21:14.812] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:14.812] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:21:15.099] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:15.099] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:15.100] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:21:15.100] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:21:15.100] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:21:15.100] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:15.101] [] [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:15.101] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[13:21:15.101] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:15.101] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:21:15.101] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:15.101] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:21:15.101] [] [Debug] SaveChanges starting for '"UsersContext"'.
+[13:21:15.101] [] [Debug] DetectChanges starting for '"UsersContext"'.
+[13:21:15.102] [] [Debug] The unchanged property '"Users"."LastLogin"' was detected as changed from '11/04/2025 13:00:47' to '11/05/2025 13:21:15' and will be marked as modified for entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[13:21:15.102] [] [Debug] The '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"' tracked by '"UsersContext"' changed state from 'Unchanged' to 'Modified'.
+[13:21:15.102] [] [Debug] DetectChanges completed for '"UsersContext"'.
+[13:21:15.105] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:15.105] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:15.105] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:21:15.105] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:21:15.106] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:21:15.107] [] [Debug] Executing DbCommand [Parameters=["@p1='f471d889-4552-4bc0-974f-51f702914885', @p0='2025-11-05T13:21:15.1019150+02:00' (Nullable = true)"], CommandType='Text', CommandTimeout='600']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [LastLogin] = @p0
+OUTPUT 1
+WHERE [UserId] = @p1;"
+[13:21:15.110] [] [Information] Executed DbCommand ("4"ms) [Parameters=["@p1='f471d889-4552-4bc0-974f-51f702914885', @p0='2025-11-05T13:21:15.1019150+02:00' (Nullable = true)"], CommandType='Text', CommandTimeout='600']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [LastLogin] = @p0
+OUTPUT 1
+WHERE [UserId] = @p1;"
+[13:21:15.110] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:15.110] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:21:15.110] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:15.110] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:21:15.110] [] [Debug] The '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"' tracked by '"UsersContext"' changed state from 'Modified' to 'Unchanged'.
+[13:21:15.110] [] [Debug] SaveChanges completed for '"UsersContext"' with 1 entities written to the database.
+[13:21:15.111] [] [Debug] SaveChanges starting for '"UsersContext"'.
+[13:21:15.111] [] [Debug] DetectChanges starting for '"UsersContext"'.
+[13:21:15.111] [] [Debug] DetectChanges completed for '"UsersContext"'.
+[13:21:15.111] [] [Debug] SaveChanges completed for '"UsersContext"' with 0 entities written to the database.
+[13:21:15.111] [] [Debug] Committing transaction.
+[13:21:15.111] [] [Debug] Committed transaction.
+[13:21:15.111] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:15.111] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:21:16.145] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:16.145] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:16.145] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:21:16.145] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:21:16.145] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:21:16.145] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:16.146] [] [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:16.146] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[13:21:16.147] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:16.147] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:21:16.147] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:16.147] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:21:16.147] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:16.148] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:16.148] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:21:16.148] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:21:16.148] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:21:16.148] [] [Debug] Executing DbCommand [Parameters=["@__userId_0='f471d889-4552-4bc0-974f-51f702914885'"], CommandType='Text', CommandTimeout='600']"
+""SELECT [r0].[RoleId], [r0].[RoleName]
+FROM [RolesUsers] AS [r]
+INNER JOIN [Roles] AS [r0] ON [r].[RolesRoleId] = [r0].[RoleId]
+WHERE [r].[UsersUserId] = @__userId_0"
+[13:21:16.153] [] [Information] Executed DbCommand ("5"ms) [Parameters=["@__userId_0='f471d889-4552-4bc0-974f-51f702914885'"], CommandType='Text', CommandTimeout='600']"
+""SELECT [r0].[RoleId], [r0].[RoleName]
+FROM [RolesUsers] AS [r]
+INNER JOIN [Roles] AS [r0] ON [r].[RolesRoleId] = [r0].[RoleId]
+WHERE [r].[UsersUserId] = @__userId_0"
+[13:21:16.153] [] [Debug] Context '"UsersContext"' started tracking '"Roles"' entity with key '"{RoleId: 2}"'.
+[13:21:16.153] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:16.153] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:21:16.153] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:16.153] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:21:16.154] [] [Debug] Disposing transaction.
+[13:21:16.155] [] [Information] Executed endpoint '"HTTP: POST login"'
+[13:21:16.156] [] [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7213""""/login""" - 200 null "application/json; charset=utf-8" 3103.177ms
+[13:21:36.198] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/auth""" - null null
+[13:21:36.199] [] [Information] CORS policy execution successful.
+[13:21:36.199] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/auth""" - 204 null null 0.7073ms
+[13:21:36.201] [] [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7213""""/auth""" - "application/json" 21
+[13:21:36.203] [] [Information] CORS policy execution successful.
+[13:21:36.205] [] [Information] Executing endpoint '"HTTP: POST auth"'
+[13:21:37.865] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:37.865] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:37.865] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:21:37.865] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:21:37.865] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:21:37.865] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:37.866] [] [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:37.867] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[13:21:37.867] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:37.867] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:21:37.867] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:37.867] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:21:39.787] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:39.787] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:39.787] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:21:39.787] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:21:39.787] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:21:39.787] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:39.788] [] [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[13:21:39.788] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[13:21:39.788] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:39.788] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:21:39.788] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:39.789] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:21:39.789] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:39.789] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:39.789] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:21:39.789] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:21:39.789] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:21:39.789] [] [Debug] Executing DbCommand [Parameters=["@__userId_0='f471d889-4552-4bc0-974f-51f702914885'"], CommandType='Text', CommandTimeout='600']"
+""SELECT [r0].[RoleId], [r0].[RoleName]
+FROM [RolesUsers] AS [r]
+INNER JOIN [Roles] AS [r0] ON [r].[RolesRoleId] = [r0].[RoleId]
+WHERE [r].[UsersUserId] = @__userId_0"
+[13:21:39.790] [] [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='f471d889-4552-4bc0-974f-51f702914885'"], CommandType='Text', CommandTimeout='600']"
+""SELECT [r0].[RoleId], [r0].[RoleName]
+FROM [RolesUsers] AS [r]
+INNER JOIN [Roles] AS [r0] ON [r].[RolesRoleId] = [r0].[RoleId]
+WHERE [r].[UsersUserId] = @__userId_0"
+[13:21:39.790] [] [Debug] Context '"UsersContext"' started tracking '"Roles"' entity with key '"{RoleId: 2}"'.
+[13:21:39.790] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:39.790] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:21:39.790] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:21:39.790] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:21:39.790] [] [Information] Executed endpoint '"HTTP: POST auth"'
+[13:21:39.791] [] [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7213""""/auth""" - 200 null "application/json; charset=utf-8" 3590.0517ms
+[13:23:03.732] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - null null
+[13:23:03.732] [] [Information] CORS policy execution successful.
+[13:23:03.732] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - 204 null null 0.536ms
+[13:23:03.742] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - null null
+[13:23:03.744] [] [Information] CORS policy execution successful.
+[13:23:03.745] [] [Information] Executing endpoint '"HTTP: GET profile"'
+[13:23:03.746] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:23:03.746] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:23:03.746] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:23:03.747] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:23:03.747] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:23:03.747] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[13:23:03.751] [] [Information] Executed DbCommand ("4"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[13:23:03.751] [] [Debug] Context '"UsersContext"' started tracking '"Profiles"' entity with key '"{ProfileId: 05316a2c-c4f5-41fb-b188-cd5de5a31f0e}"'.
+[13:23:03.751] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:23:03.751] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:23:03.751] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:23:03.751] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:23:03.752] [] [Information] Executed endpoint '"HTTP: GET profile"'
+[13:23:03.752] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - 200 null "application/json; charset=utf-8" 9.8731ms
+[13:24:09.850] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - null null
+[13:24:09.850] [] [Information] CORS policy execution successful.
+[13:24:09.850] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - 204 null null 0.6575ms
+[13:24:09.855] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - null null
+[13:24:09.858] [] [Information] CORS policy execution successful.
+[13:24:09.863] [] [Information] Executing endpoint '"HTTP: GET profile"'
+[13:24:09.867] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:09.867] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:09.868] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:24:09.868] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:24:09.869] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (1ms).
+[13:24:09.870] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[13:24:09.885] [] [Information] Executed DbCommand ("15"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[13:24:09.886] [] [Debug] Context '"UsersContext"' started tracking '"Profiles"' entity with key '"{ProfileId: 05316a2c-c4f5-41fb-b188-cd5de5a31f0e}"'.
+[13:24:09.887] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:09.887] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 2ms reading results.
+[13:24:09.887] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:09.887] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:24:09.888] [] [Information] Executed endpoint '"HTTP: GET profile"'
+[13:24:09.889] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - 200 null "application/json; charset=utf-8" 33.9093ms
+[13:24:11.820] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - null null
+[13:24:11.820] [] [Information] CORS policy execution successful.
+[13:24:11.820] [] [Information] Executing endpoint '"HTTP: GET profile"'
+[13:24:11.821] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:11.821] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:11.821] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:24:11.821] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:24:11.821] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:24:11.821] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[13:24:11.825] [] [Information] Executed DbCommand ("3"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[13:24:11.825] [] [Debug] Context '"UsersContext"' started tracking '"Profiles"' entity with key '"{ProfileId: 05316a2c-c4f5-41fb-b188-cd5de5a31f0e}"'.
+[13:24:11.825] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:11.825] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:24:11.825] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:11.825] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:24:11.825] [] [Information] Executed endpoint '"HTTP: GET profile"'
+[13:24:11.826] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - 200 null "application/json; charset=utf-8" 6.5491ms
+[13:24:26.814] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - null null
+[13:24:26.815] [] [Information] CORS policy execution successful.
+[13:24:26.815] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - 204 null null 0.9857ms
+[13:24:26.819] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - null null
+[13:24:26.825] [] [Information] CORS policy execution successful.
+[13:24:26.828] [] [Information] Executing endpoint '"HTTP: GET profile"'
+[13:24:26.831] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:26.832] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:26.832] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[13:24:26.832] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[13:24:26.832] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[13:24:26.832] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[13:24:26.834] [] [Information] Executed DbCommand ("3"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[13:24:26.834] [] [Debug] Context '"UsersContext"' started tracking '"Profiles"' entity with key '"{ProfileId: 05316a2c-c4f5-41fb-b188-cd5de5a31f0e}"'.
+[13:24:26.835] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:26.835] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[13:24:26.835] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[13:24:26.835] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[13:24:26.835] [] [Information] Executed endpoint '"HTTP: GET profile"'
+[13:24:26.835] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - 200 null "application/json; charset=utf-8" 15.5714ms

@@ -1,0 +1,570 @@
+[14:14:33.644] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/login""" - null null
+[14:14:33.660] [] [Information] CORS policy execution successful.
+[14:14:33.661] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/login""" - 204 null null 17.3951ms
+[14:14:33.663] [] [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7213""""/login""" - "application/json" 70
+[14:14:33.664] [] [Information] CORS policy execution successful.
+[14:14:33.665] [] [Information] Executing endpoint '"HTTP: POST login"'
+[14:14:35.744] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.770] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.773] [] [Debug] Beginning transaction with isolation level '"Unspecified"'.
+[14:14:35.774] [] [Debug] Began transaction with isolation level '"ReadCommitted"'.
+[14:14:35.777] [] [Debug] Compiling query expression: "
+"'"DbSet<Users>()
+    .Where(u => u.Username == __username_0)
+    .FirstOrDefault()"'
+[14:14:35.791] [] [Debug] Generated query execution expression: "
+"'"queryContext => SingleQueryingEnumerable.Create<Users>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Users.UserId (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Users.CreationTime (DateTime) Required, 1], [Property: Users.LastLogin (DateTime?), 2], [Property: Users.LastLoginAttempt (DateTime?), 3], [Property: Users.LastPasswordChange (DateTime?), 4], [Property: Users.Password (string) Required, 5], [Property: Users.PasswordTrys (int) Required, 6], [Property: Users.TOTPKey (string), 7], [Property: Users.Username (string) Required, 8] }
+        SELECT TOP(1) u.UserId, u.CreationTime, u.LastLogin, u.LastLoginAttempt, u.LastPasswordChange, u.Password, u.PasswordTrys, u.TOTPKey, u.Username
+        FROM Users AS u
+        WHERE u.Username == @__username_0) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Users.UserId (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Users.CreationTime (DateTime) Required, 1], [Property: Users.LastLogin (DateTime?), 2], [Property: Users.LastLoginAttempt (DateTime?), 3], [Property: Users.LastPasswordChange (DateTime?), 4], [Property: Users.Password (string) Required, 5], [Property: Users.PasswordTrys (int) Required, 6], [Property: Users.TOTPKey (string), 7], [Property: Users.Username (string) Required, 8] }
+        SELECT TOP(1) u.UserId, u.CreationTime, u.LastLogin, u.LastLoginAttempt, u.LastPasswordChange, u.Password, u.PasswordTrys, u.TOTPKey, u.Username
+        FROM Users AS u
+        WHERE u.Username == @__username_0, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        Users entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            Users instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(Users);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: Users.UserId PK | Resolver: c => c.Dependencies.Model.FindEntityType(\"Domain.Entities.Users\").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetGuid(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (Users)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: Users | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType(\"Domain.Entities.Users\")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: Users | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType(\"Domain.Entities.Users\")]: 
+                        {
+                            return 
+                            {
+                                Users instance;
+                                instance = new Users();
+                                instance.<UserId>k__BackingField = dataReader.GetGuid(0);
+                                instance.<CreationTime>k__BackingField = dataReader.GetDateTime(1);
+                                instance.<LastLogin>k__BackingField = dataReader.IsDBNull(2) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(2);
+                                instance.<LastLoginAttempt>k__BackingField = dataReader.IsDBNull(3) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(3);
+                                instance.<LastPasswordChange>k__BackingField = dataReader.IsDBNull(4) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(4);
+                                instance.<Password>k__BackingField = dataReader.GetString(5);
+                                instance.<PasswordTrys>k__BackingField = dataReader.GetInt32(6);
+                                instance.<TOTPKey>k__BackingField = dataReader.IsDBNull(7) ? default(string) : dataReader.GetString(7);
+                                instance.<Username>k__BackingField = dataReader.GetString(8);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: Users | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType(\"Domain.Entities.Users\")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(Users)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: Infrastructure.Persistence.UsersContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)
+    .SingleOrDefault()"'
+[14:14:35.794] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.804] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.805] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:14:35.805] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:14:35.805] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (1ms).
+[14:14:35.805] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:14:35.809] [] [Information] Executed DbCommand ("4"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:14:35.809] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[14:14:35.810] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.810] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:14:35.810] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.810] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:14:35.811] [] [Debug] Compiling query expression: "
+"'"DbSet<Users>()
+    .Where(u => u.Username == __loginRequest_Username_0)
+    .FirstOrDefault()"'
+[14:14:35.813] [] [Debug] Generated query execution expression: "
+"'"queryContext => SingleQueryingEnumerable.Create<Users>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Users.UserId (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Users.CreationTime (DateTime) Required, 1], [Property: Users.LastLogin (DateTime?), 2], [Property: Users.LastLoginAttempt (DateTime?), 3], [Property: Users.LastPasswordChange (DateTime?), 4], [Property: Users.Password (string) Required, 5], [Property: Users.PasswordTrys (int) Required, 6], [Property: Users.TOTPKey (string), 7], [Property: Users.Username (string) Required, 8] }
+        SELECT TOP(1) u.UserId, u.CreationTime, u.LastLogin, u.LastLoginAttempt, u.LastPasswordChange, u.Password, u.PasswordTrys, u.TOTPKey, u.Username
+        FROM Users AS u
+        WHERE u.Username == @__loginRequest_Username_0) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Users.UserId (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Users.CreationTime (DateTime) Required, 1], [Property: Users.LastLogin (DateTime?), 2], [Property: Users.LastLoginAttempt (DateTime?), 3], [Property: Users.LastPasswordChange (DateTime?), 4], [Property: Users.Password (string) Required, 5], [Property: Users.PasswordTrys (int) Required, 6], [Property: Users.TOTPKey (string), 7], [Property: Users.Username (string) Required, 8] }
+        SELECT TOP(1) u.UserId, u.CreationTime, u.LastLogin, u.LastLoginAttempt, u.LastPasswordChange, u.Password, u.PasswordTrys, u.TOTPKey, u.Username
+        FROM Users AS u
+        WHERE u.Username == @__loginRequest_Username_0, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        Users entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            Users instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(Users);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: Users.UserId PK | Resolver: c => c.Dependencies.Model.FindEntityType(\"Domain.Entities.Users\").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetGuid(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (Users)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: Users | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType(\"Domain.Entities.Users\")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: Users | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType(\"Domain.Entities.Users\")]: 
+                        {
+                            return 
+                            {
+                                Users instance;
+                                instance = new Users();
+                                instance.<UserId>k__BackingField = dataReader.GetGuid(0);
+                                instance.<CreationTime>k__BackingField = dataReader.GetDateTime(1);
+                                instance.<LastLogin>k__BackingField = dataReader.IsDBNull(2) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(2);
+                                instance.<LastLoginAttempt>k__BackingField = dataReader.IsDBNull(3) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(3);
+                                instance.<LastPasswordChange>k__BackingField = dataReader.IsDBNull(4) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(4);
+                                instance.<Password>k__BackingField = dataReader.GetString(5);
+                                instance.<PasswordTrys>k__BackingField = dataReader.GetInt32(6);
+                                instance.<TOTPKey>k__BackingField = dataReader.IsDBNull(7) ? default(string) : dataReader.GetString(7);
+                                instance.<Username>k__BackingField = dataReader.GetString(8);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: Users | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType(\"Domain.Entities.Users\")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(Users)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: Infrastructure.Persistence.UsersContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)
+    .SingleOrDefault()"'
+[14:14:35.814] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:14:35.815] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:14:35.815] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:14:35.815] [] [Debug] Executing DbCommand [Parameters=["@__loginRequest_Username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginRequest_Username_0"
+[14:14:35.819] [] [Information] Executed DbCommand ("4"ms) [Parameters=["@__loginRequest_Username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__loginRequest_Username_0"
+[14:14:35.819] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[14:14:35.820] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.820] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:14:35.820] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.820] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.820] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:14:35.820] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:14:35.820] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:14:35.820] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:14:35.822] [] [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:14:35.822] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[14:14:35.822] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.822] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:14:35.822] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:35.823] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:14:36.214] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:36.214] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:36.214] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:14:36.214] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:14:36.214] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:14:36.214] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:14:36.216] [] [Information] Executed DbCommand ("2"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:14:36.216] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[14:14:36.216] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:36.216] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:14:36.216] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:36.216] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:14:36.216] [] [Debug] SaveChanges starting for '"UsersContext"'.
+[14:14:36.216] [] [Debug] DetectChanges starting for '"UsersContext"'.
+[14:14:36.217] [] [Debug] The unchanged property '"Users"."LastLogin"' was detected as changed from '10/29/2025 23:47:52' to '10/30/2025 14:14:36' and will be marked as modified for entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[14:14:36.217] [] [Debug] The '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"' tracked by '"UsersContext"' changed state from 'Unchanged' to 'Modified'.
+[14:14:36.217] [] [Debug] DetectChanges completed for '"UsersContext"'.
+[14:14:36.219] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:36.219] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:36.219] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:14:36.219] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:14:36.219] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:14:36.219] [] [Debug] Executing DbCommand [Parameters=["@p1='f471d889-4552-4bc0-974f-51f702914885', @p0='2025-10-30T14:14:36.2168887+02:00' (Nullable = true)"], CommandType='Text', CommandTimeout='600']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [LastLogin] = @p0
+OUTPUT 1
+WHERE [UserId] = @p1;"
+[14:14:36.223] [] [Information] Executed DbCommand ("4"ms) [Parameters=["@p1='f471d889-4552-4bc0-974f-51f702914885', @p0='2025-10-30T14:14:36.2168887+02:00' (Nullable = true)"], CommandType='Text', CommandTimeout='600']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Users] SET [LastLogin] = @p0
+OUTPUT 1
+WHERE [UserId] = @p1;"
+[14:14:36.223] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:36.223] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:14:36.223] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:36.224] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:14:36.224] [] [Debug] The '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"' tracked by '"UsersContext"' changed state from 'Modified' to 'Unchanged'.
+[14:14:36.224] [] [Debug] SaveChanges completed for '"UsersContext"' with 1 entities written to the database.
+[14:14:36.224] [] [Debug] SaveChanges starting for '"UsersContext"'.
+[14:14:36.224] [] [Debug] DetectChanges starting for '"UsersContext"'.
+[14:14:36.225] [] [Debug] DetectChanges completed for '"UsersContext"'.
+[14:14:36.225] [] [Debug] SaveChanges completed for '"UsersContext"' with 0 entities written to the database.
+[14:14:36.225] [] [Debug] Committing transaction.
+[14:14:36.225] [] [Debug] Committed transaction.
+[14:14:36.225] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:36.225] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:14:37.423] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:37.423] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:37.423] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:14:37.423] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:14:37.423] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:14:37.423] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:14:37.425] [] [Information] Executed DbCommand ("2"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:14:37.425] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[14:14:37.425] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:37.426] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:14:37.426] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:37.426] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:14:37.427] [] [Debug] Compiling query expression: "
+"'"DbSet<RolesUsers>()
+    .Include(ru => ru.Roles)
+    .Where(ru => ru.UsersUserId == __userId_0)
+    .Select(ru => ru.Roles)"'
+[14:14:37.432] [] [Debug] Generated query execution expression: "
+"'"queryContext => SingleQueryingEnumerable.Create<Roles>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Roles.RoleId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Roles.RoleName (string) Required, 1] }
+        SELECT r0.RoleId, r0.RoleName
+        FROM RolesUsers AS r
+        INNER JOIN Roles AS r0 ON r.RolesRoleId == r0.RoleId
+        WHERE r.UsersUserId == @__userId_0) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Roles.RoleId (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Roles.RoleName (string) Required, 1] }
+        SELECT r0.RoleId, r0.RoleName
+        FROM RolesUsers AS r
+        INNER JOIN Roles AS r0 ON r.RolesRoleId == r0.RoleId
+        WHERE r.UsersUserId == @__userId_0, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        Roles entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            Roles instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(Roles);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: Roles.RoleId PK | Resolver: c => c.Dependencies.Model.FindEntityType(\"Domain.Entities.Roles\").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (Roles)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: Roles | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType(\"Domain.Entities.Roles\")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: Roles | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType(\"Domain.Entities.Roles\")]: 
+                        {
+                            return 
+                            {
+                                Roles instance;
+                                instance = new Roles();
+                                instance.<RoleId>k__BackingField = dataReader.GetInt32(0);
+                                instance.<RoleName>k__BackingField = dataReader.GetString(1);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: Roles | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType(\"Domain.Entities.Roles\")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(Roles)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: Infrastructure.Persistence.UsersContext, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)"'
+[14:14:37.433] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:37.434] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:37.434] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:14:37.434] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:14:37.434] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:14:37.434] [] [Debug] Executing DbCommand [Parameters=["@__userId_0='f471d889-4552-4bc0-974f-51f702914885'"], CommandType='Text', CommandTimeout='600']"
+""SELECT [r0].[RoleId], [r0].[RoleName]
+FROM [RolesUsers] AS [r]
+INNER JOIN [Roles] AS [r0] ON [r].[RolesRoleId] = [r0].[RoleId]
+WHERE [r].[UsersUserId] = @__userId_0"
+[14:14:37.438] [] [Information] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='f471d889-4552-4bc0-974f-51f702914885'"], CommandType='Text', CommandTimeout='600']"
+""SELECT [r0].[RoleId], [r0].[RoleName]
+FROM [RolesUsers] AS [r]
+INNER JOIN [Roles] AS [r0] ON [r].[RolesRoleId] = [r0].[RoleId]
+WHERE [r].[UsersUserId] = @__userId_0"
+[14:14:37.438] [] [Debug] Context '"UsersContext"' started tracking '"Roles"' entity with key '"{RoleId: 2}"'.
+[14:14:37.439] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:37.439] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:14:37.439] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:14:37.439] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:14:37.441] [] [Debug] Disposing transaction.
+[14:14:37.441] [] [Information] Executed endpoint '"HTTP: POST login"'
+[14:14:37.441] [] [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7213""""/login""" - 200 null "application/json; charset=utf-8" 3778.1934ms
+[14:15:45.771] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/auth""" - null null
+[14:15:45.771] [] [Information] CORS policy execution successful.
+[14:15:45.772] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/auth""" - 204 null null 1.3312ms
+[14:15:45.775] [] [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7213""""/auth""" - "application/json" 21
+[14:15:45.777] [] [Information] CORS policy execution successful.
+[14:15:45.779] [] [Information] Executing endpoint '"HTTP: POST auth"'
+[14:15:47.599] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:47.599] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:47.599] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:15:47.599] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:15:47.599] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:15:47.599] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:15:47.602] [] [Information] Executed DbCommand ("3"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:15:47.603] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[14:15:47.603] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:47.603] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:15:47.603] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:47.603] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:15:49.591] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:49.591] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:49.591] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:15:49.591] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:15:49.591] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:15:49.591] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:15:49.594] [] [Information] Executed DbCommand ("3"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [u].[UserId], [u].[CreationTime], [u].[LastLogin], [u].[LastLoginAttempt], [u].[LastPasswordChange], [u].[Password], [u].[PasswordTrys], [u].[TOTPKey], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0"
+[14:15:49.594] [] [Debug] Context '"UsersContext"' started tracking '"Users"' entity with key '"{UserId: f471d889-4552-4bc0-974f-51f702914885}"'.
+[14:15:49.594] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:49.594] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:15:49.594] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:49.595] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:15:49.595] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:49.595] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:49.595] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:15:49.595] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:15:49.595] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:15:49.595] [] [Debug] Executing DbCommand [Parameters=["@__userId_0='f471d889-4552-4bc0-974f-51f702914885'"], CommandType='Text', CommandTimeout='600']"
+""SELECT [r0].[RoleId], [r0].[RoleName]
+FROM [RolesUsers] AS [r]
+INNER JOIN [Roles] AS [r0] ON [r].[RolesRoleId] = [r0].[RoleId]
+WHERE [r].[UsersUserId] = @__userId_0"
+[14:15:49.598] [] [Information] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='f471d889-4552-4bc0-974f-51f702914885'"], CommandType='Text', CommandTimeout='600']"
+""SELECT [r0].[RoleId], [r0].[RoleName]
+FROM [RolesUsers] AS [r]
+INNER JOIN [Roles] AS [r0] ON [r].[RolesRoleId] = [r0].[RoleId]
+WHERE [r].[UsersUserId] = @__userId_0"
+[14:15:49.598] [] [Debug] Context '"UsersContext"' started tracking '"Roles"' entity with key '"{RoleId: 2}"'.
+[14:15:49.599] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:49.599] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:15:49.599] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:15:49.599] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:15:49.600] [] [Information] Executed endpoint '"HTTP: POST auth"'
+[14:15:49.600] [] [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7213""""/auth""" - 200 null "application/json; charset=utf-8" 3824.5539ms
+[14:16:11.236] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - null null
+[14:16:11.237] [] [Information] CORS policy execution successful.
+[14:16:11.237] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - 204 null null 1.9308ms
+[14:16:11.248] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - null null
+[14:16:11.249] [] [Information] CORS policy execution successful.
+[14:16:11.250] [] [Information] Executing endpoint '"HTTP: GET profile"'
+[14:16:13.026] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:16:13.027] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:16:13.027] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:16:13.027] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:16:13.027] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:16:13.027] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[14:16:13.031] [] [Information] Executed DbCommand ("4"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[14:16:13.031] [] [Debug] Context '"UsersContext"' started tracking '"Profiles"' entity with key '"{ProfileId: 05316a2c-c4f5-41fb-b188-cd5de5a31f0e}"'.
+[14:16:13.032] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:16:13.032] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:16:13.032] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:16:13.032] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:16:13.032] [] [Information] Executed endpoint '"HTTP: GET profile"'
+[14:16:13.032] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - 200 null "application/json; charset=utf-8" 1786.2563ms
+[14:17:26.360] [] [Information] Request starting "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - null null
+[14:17:26.360] [] [Information] CORS policy execution successful.
+[14:17:26.361] [] [Information] Request finished "HTTP/2" "OPTIONS" "https"://"localhost:7213""""/profile""" - 204 null null 1.8495ms
+[14:17:26.366] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - null null
+[14:17:26.366] [] [Information] CORS policy execution successful.
+[14:17:26.368] [] [Information] Executing endpoint '"HTTP: GET profile"'
+[14:17:27.984] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:17:27.984] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:17:27.984] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[14:17:27.984] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[14:17:27.984] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[14:17:27.984] [] [Debug] Executing DbCommand [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[14:17:27.988] [] [Information] Executed DbCommand ("4"ms) [Parameters=["@__username_0='matei2004baciu@gmail.com' (Size = 4000)"], CommandType='Text', CommandTimeout='600']"
+""SELECT TOP(1) [p].[ProfileId], [p].[Address], [p].[Email], [p].[FirstName], [p].[LastName], [p].[PhoneNumber], [p].[UserId]
+FROM [Profiles] AS [p]
+INNER JOIN [Users] AS [u] ON [p].[UserId] = [u].[UserId]
+WHERE [u].[Username] = @__username_0"
+[14:17:27.989] [] [Debug] Context '"UsersContext"' started tracking '"Profiles"' entity with key '"{ProfileId: 05316a2c-c4f5-41fb-b188-cd5de5a31f0e}"'.
+[14:17:27.989] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:17:27.989] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 0ms reading results.
+[14:17:27.989] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[14:17:27.989] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).
+[14:17:27.990] [] [Information] Executed endpoint '"HTTP: GET profile"'
+[14:17:27.990] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/profile""" - 200 null "application/json; charset=utf-8" 1624.3266ms

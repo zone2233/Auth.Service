@@ -1,0 +1,149 @@
+[10:35:51.772] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[10:35:51.810] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[10:35:52.040] [] [Debug] The index "{'UsersUserId'}" was not created on entity type '"RolesUsers"' as the properties are already covered by the index "{'UsersUserId', 'RolesRoleId'}".
+[10:35:52.103] [] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[10:35:52.172] [] [Debug] Entity Framework Core "9.0.8" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"9.0.8"' with options: "SensitiveDataLoggingEnabled MaxPoolSize=1024 CommandTimeout=600 MigrationsAssembly=Services.Authentifications.Api EngineType=SqlServer "
+[10:37:36.448] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[10:37:36.509] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[10:38:35.566] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[10:38:35.602] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[10:38:35.819] [] [Debug] The index "{'UsersUserId'}" was not created on entity type '"RolesUsers"' as the properties are already covered by the index "{'UsersUserId', 'RolesRoleId'}".
+[10:38:35.866] [] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[10:38:35.926] [] [Debug] Entity Framework Core "9.0.8" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"9.0.8"' with options: "SensitiveDataLoggingEnabled MaxPoolSize=1024 CommandTimeout=600 MigrationsAssembly=Services.Authentifications.Api EngineType=SqlServer "
+[10:38:36.006] [] [Debug] The index "{'UsersUserId'}" was not created on entity type '"RolesUsers"' as the properties are already covered by the index "{'UsersUserId', 'RolesRoleId'}".
+[10:38:56.697] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[10:38:56.735] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[10:38:56.979] [] [Debug] The index "{'UsersUserId'}" was not created on entity type '"RolesUsers"' as the properties are already covered by the index "{'UsersUserId', 'RolesRoleId'}".
+[10:38:57.028] [] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[10:38:57.093] [] [Debug] Entity Framework Core "9.0.8" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"9.0.8"' with options: "SensitiveDataLoggingEnabled MaxPoolSize=1024 CommandTimeout=600 MigrationsAssembly=Services.Authentifications.Api EngineType=SqlServer "
+[10:39:05.919] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[10:39:05.959] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[10:39:06.205] [] [Debug] The index "{'UsersUserId'}" was not created on entity type '"RolesUsers"' as the properties are already covered by the index "{'UsersUserId', 'RolesRoleId'}".
+[10:39:06.262] [] [Warning] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+[10:39:06.331] [] [Debug] Entity Framework Core "9.0.8" initialized '"UsersContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"9.0.8"' with options: "SensitiveDataLoggingEnabled MaxPoolSize=1024 CommandTimeout=600 MigrationsAssembly=Services.Authentifications.Api EngineType=SqlServer "
+[10:39:06.420] [] [Debug] Creating DbConnection.
+[10:39:06.448] [] [Debug] Created DbConnection. (26ms).
+[10:39:06.450] [] [Debug] Migrating using database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[10:39:06.453] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[10:39:06.611] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[10:39:06.615] [] [Debug] Creating DbCommand for '"ExecuteNonQuery"'.
+[10:39:06.619] [] [Debug] Created DbCommand for '"ExecuteNonQuery"' (3ms).
+[10:39:06.620] [] [Debug] Initialized DbCommand for '"ExecuteNonQuery"' (7ms).
+[10:39:06.623] [] [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""SELECT 1"
+[10:39:06.637] [] [Information] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""SELECT 1"
+[10:39:06.638] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[10:39:06.643] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (2ms).
+[10:39:06.643] [] [Debug] Opening connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[10:39:06.643] [] [Debug] Opened connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[10:39:06.644] [] [Information] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+[10:39:06.645] [] [Debug] Creating DbCommand for '"ExecuteScalar"'.
+[10:39:06.645] [] [Debug] Created DbCommand for '"ExecuteScalar"' (0ms).
+[10:39:06.645] [] [Debug] Initialized DbCommand for '"ExecuteScalar"' (0ms).
+[10:39:06.646] [] [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result"
+[10:39:06.654] [] [Information] Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result"
+[10:39:06.691] [] [Debug] Beginning transaction with isolation level '"Unspecified"'.
+[10:39:06.696] [] [Debug] Began transaction with isolation level '"ReadCommitted"'.
+[10:39:06.697] [] [Debug] Creating DbCommand for '"ExecuteNonQuery"'.
+[10:39:06.697] [] [Debug] Created DbCommand for '"ExecuteNonQuery"' (0ms).
+[10:39:06.697] [] [Debug] Initialized DbCommand for '"ExecuteNonQuery"' (0ms).
+[10:39:06.697] [] [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;"
+[10:39:06.699] [] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;"
+[10:39:06.699] [] [Debug] Committing transaction.
+[10:39:06.702] [] [Debug] Committed transaction.
+[10:39:06.702] [] [Debug] Disposing transaction.
+[10:39:06.703] [] [Debug] Beginning transaction with isolation level '"Unspecified"'.
+[10:39:06.704] [] [Debug] Began transaction with isolation level '"ReadCommitted"'.
+[10:39:06.705] [] [Debug] Creating DbCommand for '"ExecuteNonQuery"'.
+[10:39:06.705] [] [Debug] Created DbCommand for '"ExecuteNonQuery"' (0ms).
+[10:39:06.705] [] [Debug] Initialized DbCommand for '"ExecuteNonQuery"' (0ms).
+[10:39:06.705] [] [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""SELECT 1"
+[10:39:06.705] [] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""SELECT 1"
+[10:39:06.705] [] [Debug] Creating DbCommand for '"ExecuteScalar"'.
+[10:39:06.705] [] [Debug] Created DbCommand for '"ExecuteScalar"' (0ms).
+[10:39:06.705] [] [Debug] Initialized DbCommand for '"ExecuteScalar"' (0ms).
+[10:39:06.706] [] [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[10:39:06.706] [] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+[10:39:06.707] [] [Debug] Creating DbCommand for '"ExecuteReader"'.
+[10:39:06.707] [] [Debug] Created DbCommand for '"ExecuteReader"' (0ms).
+[10:39:06.707] [] [Debug] Initialized DbCommand for '"ExecuteReader"' (0ms).
+[10:39:06.707] [] [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[10:39:06.709] [] [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+[10:39:06.710] [] [Debug] Closing data reader to '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[10:39:06.711] [] [Debug] A data reader for '"UsersApi"' on server '"(localdb)\mssqllocaldb"' is being disposed after spending 1ms reading results.
+[10:39:06.714] [] [Information] Applying migration '"20250922073552_TOTPKeyMigration"'.
+[10:39:06.718] [] [Debug] Creating DbCommand for '"ExecuteNonQuery"'.
+[10:39:06.718] [] [Debug] Created DbCommand for '"ExecuteNonQuery"' (0ms).
+[10:39:06.718] [] [Debug] Initialized DbCommand for '"ExecuteNonQuery"' (0ms).
+[10:39:06.718] [] [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250922073552_TOTPKeyMigration', N'9.0.8');"
+[10:39:06.720] [] [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250922073552_TOTPKeyMigration', N'9.0.8');"
+[10:39:06.720] [] [Information] Applying migration '"20250922073857_TOTPKeyMigration1"'.
+[10:39:06.726] [] [Debug] Creating DbCommand for '"ExecuteNonQuery"'.
+[10:39:06.726] [] [Debug] Created DbCommand for '"ExecuteNonQuery"' (0ms).
+[10:39:06.726] [] [Debug] Initialized DbCommand for '"ExecuteNonQuery"' (0ms).
+[10:39:06.726] [] [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""ALTER TABLE [Users] ADD [TOTPKey] nvarchar(max) NOT NULL DEFAULT N'';"
+[10:39:06.734] [] [Information] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""ALTER TABLE [Users] ADD [TOTPKey] nvarchar(max) NOT NULL DEFAULT N'';"
+[10:39:06.734] [] [Debug] Creating DbCommand for '"ExecuteNonQuery"'.
+[10:39:06.734] [] [Debug] Created DbCommand for '"ExecuteNonQuery"' (0ms).
+[10:39:06.734] [] [Debug] Initialized DbCommand for '"ExecuteNonQuery"' (0ms).
+[10:39:06.734] [] [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250922073857_TOTPKeyMigration1', N'9.0.8');"
+[10:39:06.735] [] [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250922073857_TOTPKeyMigration1', N'9.0.8');"
+[10:39:06.735] [] [Debug] Committing transaction.
+[10:39:06.736] [] [Debug] Committed transaction.
+[10:39:06.736] [] [Debug] Creating DbCommand for '"ExecuteScalar"'.
+[10:39:06.736] [] [Debug] Created DbCommand for '"ExecuteScalar"' (0ms).
+[10:39:06.736] [] [Debug] Initialized DbCommand for '"ExecuteScalar"' (0ms).
+[10:39:06.736] [] [Debug] Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result"
+[10:39:06.737] [] [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='600']"
+""DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result"
+[10:39:06.738] [] [Debug] Disposing transaction.
+[10:39:06.738] [] [Debug] Closing connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"'.
+[10:39:06.738] [] [Debug] Closed connection to database '"UsersApi"' on server '"(localdb)\mssqllocaldb"' (0ms).

@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Services.Authentifications.Api\\Services.Authentifications.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Authentification.AngularInterface\\Authentification.AngularInterface.esproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

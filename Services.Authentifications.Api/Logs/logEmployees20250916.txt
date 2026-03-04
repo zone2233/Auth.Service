@@ -1,0 +1,380 @@
+[11:38:50.478] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:38:50.534] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:38:50.960] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:38:51.066] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:38:51.200] [] [Information] Registered 5 endpoints in "1.112" milliseconds.
+[11:38:51.338] [] [Information] No validators found in the system!
+[11:38:51.427] [] [Information] User profile is available. Using '"C:\Users\y098047\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[11:38:51.701] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[11:38:52.805] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[11:38:53.088] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 302 0 null 293.8479ms
+[11:38:53.097] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[11:38:53.176] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 79.3753ms
+[11:38:53.198] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:38:53.205] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 7.3718ms
+[11:38:53.216] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:38:53.252] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 36.3527ms
+[11:38:53.289] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:38:53.314] [] [Error] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Request DTOs without any publicly accessible properties are not supported. Offending Endpoint: [Services.Authentifications.Api.Endpoints.Auth.AsignRoleEndpoint] Offending DTO type: [System.Int32]
+   at FastEndpoints.Swagger.OperationProcessor.Process(OperationProcessorContext ctx)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.RunOperationProcessors(OpenApiDocument document, ApiDescription apiDescription, Type controllerType, MethodInfo methodInfo, OpenApiOperationDescription operationDescription, List`1 allOperations, OpenApiDocumentGenerator generator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.AddOperationDescriptionsToDocument(OpenApiDocument document, Type controllerType, List`1 operations, OpenApiDocumentGenerator swaggerGenerator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateApiGroups(OpenApiDocumentGenerator generator, OpenApiDocument document, IGrouping`2[] apiGroups, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateAsync(ApiDescriptionGroupCollection apiDescriptionGroups)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GenerateDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GetDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[11:38:53.319] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 500 null "text/plain; charset=utf-8" 30.4668ms
+[11:39:23.279] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:39:23.324] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:39:23.676] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:39:23.767] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:39:23.891] [] [Information] Registered 5 endpoints in "978" milliseconds.
+[11:39:23.982] [] [Information] No validators found in the system!
+[11:39:24.064] [] [Information] User profile is available. Using '"C:\Users\y098047\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[11:39:24.291] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[11:39:25.063] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[11:39:25.320] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 302 0 null 271.3453ms
+[11:39:25.326] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[11:39:25.389] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 62.808ms
+[11:39:25.406] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:39:25.411] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 4.6698ms
+[11:39:25.430] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:39:25.466] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 36.9343ms
+[11:39:25.504] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:39:25.523] [] [Error] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Request DTOs without any publicly accessible properties are not supported. Offending Endpoint: [Services.Authentifications.Api.Endpoints.Auth.AsignRoleEndpoint] Offending DTO type: [System.Int32]
+   at FastEndpoints.Swagger.OperationProcessor.Process(OperationProcessorContext ctx)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.RunOperationProcessors(OpenApiDocument document, ApiDescription apiDescription, Type controllerType, MethodInfo methodInfo, OpenApiOperationDescription operationDescription, List`1 allOperations, OpenApiDocumentGenerator generator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.AddOperationDescriptionsToDocument(OpenApiDocument document, Type controllerType, List`1 operations, OpenApiDocumentGenerator swaggerGenerator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateApiGroups(OpenApiDocumentGenerator generator, OpenApiDocument document, IGrouping`2[] apiGroups, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateAsync(ApiDescriptionGroupCollection apiDescriptionGroups)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GenerateDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GetDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[11:39:25.526] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 500 null "text/plain; charset=utf-8" 22.2642ms
+[11:42:42.326] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:42:42.377] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:42:42.679] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:42:42.769] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:42:42.897] [] [Information] Registered 5 endpoints in "897" milliseconds.
+[11:42:42.996] [] [Information] No validators found in the system!
+[11:42:43.067] [] [Information] User profile is available. Using '"C:\Users\y098047\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[11:42:43.268] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[11:42:44.095] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[11:42:44.304] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 302 0 null 215.8245ms
+[11:42:44.311] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[11:42:44.343] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 31.4561ms
+[11:42:44.362] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:42:44.368] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 6.0386ms
+[11:42:44.371] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:42:44.409] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 38.3414ms
+[11:42:44.445] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:42:44.464] [] [Error] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Request DTOs without any publicly accessible properties are not supported. Offending Endpoint: [Services.Authentifications.Api.Endpoints.Auth.AsignRoleEndpoint] Offending DTO type: [System.Int32]
+   at FastEndpoints.Swagger.OperationProcessor.Process(OperationProcessorContext ctx)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.RunOperationProcessors(OpenApiDocument document, ApiDescription apiDescription, Type controllerType, MethodInfo methodInfo, OpenApiOperationDescription operationDescription, List`1 allOperations, OpenApiDocumentGenerator generator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.AddOperationDescriptionsToDocument(OpenApiDocument document, Type controllerType, List`1 operations, OpenApiDocumentGenerator swaggerGenerator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateApiGroups(OpenApiDocumentGenerator generator, OpenApiDocument document, IGrouping`2[] apiGroups, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateAsync(ApiDescriptionGroupCollection apiDescriptionGroups)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GenerateDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GetDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[11:42:44.468] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 500 null "text/plain; charset=utf-8" 23.4378ms
+[11:45:21.490] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:45:21.532] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:45:21.830] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:45:21.897] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:45:21.992] [] [Information] Registered 4 endpoints in "847" milliseconds.
+[11:45:22.071] [] [Information] No validators found in the system!
+[11:45:22.139] [] [Information] User profile is available. Using '"C:\Users\y098047\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[11:45:22.337] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[11:45:23.046] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[11:45:23.254] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 302 0 null 216.0433ms
+[11:45:23.260] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[11:45:23.284] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 23.9162ms
+[11:45:23.303] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:45:23.309] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 5.6557ms
+[11:45:23.315] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:45:23.351] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 36.074ms
+[11:45:23.385] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:45:23.422] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json; charset=utf-8" 37.6517ms
+[11:48:42.567] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:48:42.610] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:48:42.939] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:48:43.009] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:48:43.115] [] [Information] Registered 5 endpoints in "844" milliseconds.
+[11:48:43.202] [] [Information] No validators found in the system!
+[11:48:43.273] [] [Information] User profile is available. Using '"C:\Users\y098047\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[11:48:43.480] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[11:48:44.110] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[11:48:44.322] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 302 0 null 218.7942ms
+[11:48:44.333] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[11:48:44.364] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 30.3939ms
+[11:48:44.381] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:48:44.386] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 4.8746ms
+[11:48:44.400] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:48:44.437] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 37.5745ms
+[11:48:44.474] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:48:44.494] [] [Error] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Request DTOs without any publicly accessible properties are not supported. Offending Endpoint: [Services.Authentifications.Api.Endpoints.Auth.AsignRoleEndpoint] Offending DTO type: [System.Int32]
+   at FastEndpoints.Swagger.OperationProcessor.Process(OperationProcessorContext ctx)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.RunOperationProcessors(OpenApiDocument document, ApiDescription apiDescription, Type controllerType, MethodInfo methodInfo, OpenApiOperationDescription operationDescription, List`1 allOperations, OpenApiDocumentGenerator generator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.AddOperationDescriptionsToDocument(OpenApiDocument document, Type controllerType, List`1 operations, OpenApiDocumentGenerator swaggerGenerator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateApiGroups(OpenApiDocumentGenerator generator, OpenApiDocument document, IGrouping`2[] apiGroups, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateAsync(ApiDescriptionGroupCollection apiDescriptionGroups)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GenerateDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GetDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[11:48:44.498] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 500 null "text/plain; charset=utf-8" 23.9576ms
+[11:49:19.847] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:49:19.912] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:49:20.245] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:49:20.325] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:50:15.907] [] [Information] Registered 5 endpoints in "56.391" milliseconds.
+[11:50:16.323] [] [Information] No validators found in the system!
+[11:50:17.802] [] [Information] User profile is available. Using '"C:\Users\y098047\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[11:50:18.061] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[11:50:18.475] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[11:50:18.721] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 302 0 null 252.8467ms
+[11:50:18.727] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[11:50:18.762] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 35.1578ms
+[11:50:18.787] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:50:18.793] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 6.0619ms
+[11:50:18.803] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:50:18.839] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 36.932ms
+[11:50:18.874] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:50:18.894] [] [Error] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Request DTOs without any publicly accessible properties are not supported. Offending Endpoint: [Services.Authentifications.Api.Endpoints.Auth.AsignRoleEndpoint] Offending DTO type: [System.Int32]
+   at FastEndpoints.Swagger.OperationProcessor.Process(OperationProcessorContext ctx)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.RunOperationProcessors(OpenApiDocument document, ApiDescription apiDescription, Type controllerType, MethodInfo methodInfo, OpenApiOperationDescription operationDescription, List`1 allOperations, OpenApiDocumentGenerator generator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.AddOperationDescriptionsToDocument(OpenApiDocument document, Type controllerType, List`1 operations, OpenApiDocumentGenerator swaggerGenerator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateApiGroups(OpenApiDocumentGenerator generator, OpenApiDocument document, IGrouping`2[] apiGroups, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateAsync(ApiDescriptionGroupCollection apiDescriptionGroups)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GenerateDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GetDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[11:50:18.897] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 500 null "text/plain; charset=utf-8" 22.6179ms
+[11:52:33.718] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:52:33.761] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:52:34.125] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:52:34.226] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:52:48.951] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:52:48.999] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:52:49.434] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:52:49.520] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:52:49.636] [] [Information] Registered 5 endpoints in "1.067" milliseconds.
+[11:52:49.720] [] [Information] No validators found in the system!
+[11:52:49.795] [] [Information] User profile is available. Using '"C:\Users\y098047\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[11:52:50.015] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[11:52:50.827] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[11:52:51.072] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 302 0 null 252.4776ms
+[11:52:51.078] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[11:52:51.109] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 31.4827ms
+[11:52:51.132] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:52:51.139] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 7.3187ms
+[11:52:51.145] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:52:51.199] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 53.5214ms
+[11:52:51.250] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:52:51.274] [] [Error] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Request DTOs without any publicly accessible properties are not supported. Offending Endpoint: [Services.Authentifications.Api.Endpoints.Auth.AsignRoleEndpoint] Offending DTO type: [System.Int32]
+   at FastEndpoints.Swagger.OperationProcessor.Process(OperationProcessorContext ctx)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.RunOperationProcessors(OpenApiDocument document, ApiDescription apiDescription, Type controllerType, MethodInfo methodInfo, OpenApiOperationDescription operationDescription, List`1 allOperations, OpenApiDocumentGenerator generator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.AddOperationDescriptionsToDocument(OpenApiDocument document, Type controllerType, List`1 operations, OpenApiDocumentGenerator swaggerGenerator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateApiGroups(OpenApiDocumentGenerator generator, OpenApiDocument document, IGrouping`2[] apiGroups, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateAsync(ApiDescriptionGroupCollection apiDescriptionGroups)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GenerateDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GetDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[11:52:51.277] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 500 null "text/plain; charset=utf-8" 26.7649ms
+[11:53:09.887] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/.well-known/appspecific/com.chrome.devtools.json""" - null null
+[11:53:09.889] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/.well-known/appspecific/com.chrome.devtools.json""" - 404 0 null 2.8841ms
+[11:53:09.892] [] [Information] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:7213""""/.well-known/appspecific/com.chrome.devtools.json", Response status code: 404
+[11:53:10.170] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/swagger-ui.css.map""" - null null
+[11:53:10.172] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/swagger-ui.css.map""" - 404 0 null 2.3093ms
+[11:53:10.173] [] [Information] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:7213""""/swagger/swagger-ui.css.map", Response status code: 404
+[11:53:14.502] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:53:14.510] [] [Error] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Request DTOs without any publicly accessible properties are not supported. Offending Endpoint: [Services.Authentifications.Api.Endpoints.Auth.AsignRoleEndpoint] Offending DTO type: [System.Int32]
+   at FastEndpoints.Swagger.OperationProcessor.Process(OperationProcessorContext ctx)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.RunOperationProcessors(OpenApiDocument document, ApiDescription apiDescription, Type controllerType, MethodInfo methodInfo, OpenApiOperationDescription operationDescription, List`1 allOperations, OpenApiDocumentGenerator generator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.AddOperationDescriptionsToDocument(OpenApiDocument document, Type controllerType, List`1 operations, OpenApiDocumentGenerator swaggerGenerator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateApiGroups(OpenApiDocumentGenerator generator, OpenApiDocument document, IGrouping`2[] apiGroups, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateAsync(ApiDescriptionGroupCollection apiDescriptionGroups)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GenerateDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GetDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[11:53:14.542] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 500 null "text/html; charset=utf-8" 39.668ms
+[11:53:14.567] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:53:14.576] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:53:14.578] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 2.1951ms
+[11:53:14.591] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 24.0546ms
+[11:53:14.632] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/favicon.ico""" - null null
+[11:53:14.633] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/favicon.ico""" - 404 0 null 0.9483ms
+[11:53:14.633] [] [Information] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:7213""""/favicon.ico", Response status code: 404
+[11:56:37.482] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:56:37.540] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[11:56:38.024] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:56:38.177] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[11:56:38.467] [] [Information] Registered 5 endpoints in "1.435" milliseconds.
+[11:56:38.746] [] [Information] No validators found in the system!
+[11:56:38.902] [] [Information] User profile is available. Using '"C:\Users\y098047\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[11:56:39.399] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[11:56:40.200] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[11:56:40.518] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 302 0 null 327.0669ms
+[11:56:40.530] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[11:56:40.576] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 46.2277ms
+[11:56:40.605] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:56:40.611] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 6.5477ms
+[11:56:40.621] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:56:40.669] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 47.7498ms
+[11:56:40.715] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:56:40.742] [] [Error] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Request DTOs without any publicly accessible properties are not supported. Offending Endpoint: [Services.Authentifications.Api.Endpoints.Auth.AsignRoleEndpoint] Offending DTO type: [System.Int32]
+   at FastEndpoints.Swagger.OperationProcessor.Process(OperationProcessorContext ctx)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.RunOperationProcessors(OpenApiDocument document, ApiDescription apiDescription, Type controllerType, MethodInfo methodInfo, OpenApiOperationDescription operationDescription, List`1 allOperations, OpenApiDocumentGenerator generator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.AddOperationDescriptionsToDocument(OpenApiDocument document, Type controllerType, List`1 operations, OpenApiDocumentGenerator swaggerGenerator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateApiGroups(OpenApiDocumentGenerator generator, OpenApiDocument document, IGrouping`2[] apiGroups, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateAsync(ApiDescriptionGroupCollection apiDescriptionGroups)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GenerateDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GetDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[11:56:40.745] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 500 null "text/plain; charset=utf-8" 30.5724ms
+[11:56:45.732] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/.well-known/appspecific/com.chrome.devtools.json""" - null null
+[11:56:45.734] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/.well-known/appspecific/com.chrome.devtools.json""" - 404 0 null 1.948ms
+[11:56:45.736] [] [Information] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:7213""""/.well-known/appspecific/com.chrome.devtools.json", Response status code: 404
+[11:56:46.089] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/swagger-ui.css.map""" - null null
+[11:56:46.092] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/swagger-ui.css.map""" - 404 0 null 3.3798ms
+[11:56:46.093] [] [Information] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:7213""""/swagger/swagger-ui.css.map", Response status code: 404
+[11:56:50.499] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:56:50.503] [] [Error] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: Request DTOs without any publicly accessible properties are not supported. Offending Endpoint: [Services.Authentifications.Api.Endpoints.Auth.AsignRoleEndpoint] Offending DTO type: [System.Int32]
+   at FastEndpoints.Swagger.OperationProcessor.Process(OperationProcessorContext ctx)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.RunOperationProcessors(OpenApiDocument document, ApiDescription apiDescription, Type controllerType, MethodInfo methodInfo, OpenApiOperationDescription operationDescription, List`1 allOperations, OpenApiDocumentGenerator generator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.AddOperationDescriptionsToDocument(OpenApiDocument document, Type controllerType, List`1 operations, OpenApiDocumentGenerator swaggerGenerator, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateApiGroups(OpenApiDocumentGenerator generator, OpenApiDocument document, IGrouping`2[] apiGroups, OpenApiSchemaResolver schemaResolver)
+   at NSwag.Generation.AspNetCore.AspNetCoreOpenApiDocumentGenerator.GenerateAsync(ApiDescriptionGroupCollection apiDescriptionGroups)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GenerateDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GetDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.GetDocumentAsync(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[11:56:50.541] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 500 null "text/html; charset=utf-8" 43.1743ms
+[11:56:50.567] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:56:50.567] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:56:50.568] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 1.55ms
+[11:56:50.593] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 25.9781ms
+[12:07:21.771] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[12:07:21.815] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[12:07:22.187] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[12:07:22.263] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[12:07:22.375] [] [Information] Registered 5 endpoints in "969" milliseconds.
+[12:07:22.460] [] [Information] No validators found in the system!
+[12:07:22.544] [] [Information] User profile is available. Using '"C:\Users\y098047\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[12:07:22.791] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[12:07:23.388] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[12:07:23.688] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 302 0 null 308.7729ms
+[12:07:23.695] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[12:07:23.729] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 33.5708ms
+[12:07:23.759] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[12:07:23.768] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 9.1011ms
+[12:07:23.775] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[12:07:23.814] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 38.9815ms
+[12:07:23.849] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[12:07:23.884] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json; charset=utf-8" 34.8006ms
+[12:08:42.039] [] [Information] Request starting "HTTP/1.1" "PUT" "https"://"localhost:7213""""/asign/role""" - null 0
+[12:08:42.045] [] [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)"
+[12:08:42.047] [] [Information] AuthenticationScheme: "Bearer" was challenged.
+[12:08:42.059] [] [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:7213""""/asign/role""" - 401 0 null 20.6593ms
+[12:14:20.157] [] [Information] Request starting "HTTP/1.1" "PUT" "https"://"localhost:7213""""/asign/role""" - "application/json" 89
+[12:14:20.160] [] [Information] Authorization failed. "These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (admin)"
+[12:14:20.160] [] [Information] AuthenticationScheme: "Bearer" was challenged.
+[12:14:20.161] [] [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:7213""""/asign/role""" - 401 0 null 5.1269ms
+[12:14:48.867] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[12:14:48.908] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[12:14:49.249] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[12:14:49.319] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[12:14:49.439] [] [Information] Registered 5 endpoints in "879" milliseconds.
+[12:14:49.546] [] [Information] No validators found in the system!
+[12:14:49.621] [] [Information] User profile is available. Using '"C:\Users\y098047\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+[12:14:49.849] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[12:14:50.630] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[12:14:50.842] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 302 0 null 216.8356ms
+[12:14:50.848] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[12:14:50.877] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 28.8107ms
+[12:14:50.897] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[12:14:50.903] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 5.9629ms
+[12:14:50.912] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[12:14:50.947] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 35.2762ms
+[12:14:50.980] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[12:14:51.018] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json; charset=utf-8" 38.7764ms
+[12:14:54.706] [] [Information] Request starting "HTTP/1.1" "PUT" "https"://"localhost:7213""""/asign/role""" - "application/json" 89
+[12:14:54.712] [] [Information] Executing endpoint '"HTTP: PUT asign/role"'
+[12:14:54.797] [] [Information] Executed endpoint '"HTTP: PUT asign/role"'
+[12:14:54.798] [] [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:7213""""/asign/role""" - 400 null "application/problem+json; charset=utf-8" 91.9252ms
+[12:15:18.369] [] [Information] Request starting "HTTP/1.1" "PUT" "https"://"localhost:7213""""/asign/role""" - "application/json" 90
+[12:15:18.370] [] [Information] Executing endpoint '"HTTP: PUT asign/role"'
+[12:15:18.390] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[12:15:18.409] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[12:15:18.414] [] [Debug] An 'IServiceProvider' was created for internal use by Entity Framework.
+[12:15:18.438] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[12:15:18.498] [] [Debug] The index "{'RolesRoleId'}" was not created on entity type '"RolesUsers (Dictionary<string, object>)"' as the properties are already covered by the index "{'RolesRoleId', 'UsersUserId'}".
+[12:15:18.553] [] [Information] Executed endpoint '"HTTP: PUT asign/role"'
+[12:15:18.554] [] [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The entity type 'RolesUsers' requires a primary key to be defined. If you intended to use a keyless entity type, call 'HasNoKey' in 'OnModelCreating'. For more information on keyless entity types, see https://go.microsoft.com/fwlink/?linkid=2141943.
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNonNullPrimaryKeys(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.DbContext.DisposeSync(Boolean leaseActive, Boolean contextShouldBeDisposed)
+   at Microsoft.EntityFrameworkCore.DbContext.Dispose()
+   at Infrastructure.Repositories.UsersService.GetUserById(Guid id, CancellationToken cancellationToken) in C:\Users\y098047\source\repos\Authentification.Api\Infrastructure\Repositories\UsersService.cs:line 39
+   at Infrastructure.Repositories.AdminService.AsignRoleByUserId(Guid userId, Int32 roleId, CancellationToken cancellationToken) in C:\Users\y098047\source\repos\Authentification.Api\Infrastructure\Repositories\AdminService.cs:line 30
+   at Services.Authentifications.Api.Endpoints.Auth.AsignRoleEndpoint.HandleAsync(RolesUsers rolesUsers, CancellationToken cancellationToken) in C:\Users\y098047\source\repos\Authentification.Api\Services.Authentifications.Api\Endpoints\Auth\AsignRoleEndpoint.cs:line 25
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[12:15:18.576] [] [Information] Request finished "HTTP/1.1" "PUT" "https"://"localhost:7213""""/asign/role""" - 500 null "text/plain; charset=utf-8" 207.3096ms

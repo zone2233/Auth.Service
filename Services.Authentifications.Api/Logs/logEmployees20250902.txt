@@ -1,0 +1,156 @@
+[11:57:05.622] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[11:57:08.458] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - null null
+[11:57:08.727] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger""" - 301 0 null 283.9623ms
+[11:57:08.736] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[11:57:08.850] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 115.0566ms
+[11:57:08.886] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/swagger-ui.css""" - null null
+[11:57:08.886] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/swagger-ui-bundle.js""" - null null
+[11:57:08.887] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/swagger-ui-standalone-preset.js""" - null null
+[11:57:08.887] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[11:57:08.887] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[11:57:08.900] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 12.9175ms
+[11:57:08.961] [] [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+[11:57:08.962] [] [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+[11:57:08.962] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/swagger-ui.css""" - 200 152034 "text/css" 76.0028ms
+[11:57:08.962] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/swagger-ui-standalone-preset.js""" - 200 230280 "text/javascript" 75.8428ms
+[11:57:08.979] [] [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+[11:57:08.979] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/swagger-ui-bundle.js""" - 200 1456926 "text/javascript" 92.8727ms
+[11:57:09.027] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 140.2101ms
+[11:57:09.196] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:57:09.207] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 10.6219ms
+[11:57:09.227] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/favicon-32x32.png""" - null null
+[11:57:09.228] [] [Information] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+[11:57:09.228] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/favicon-32x32.png""" - 200 628 "image/png" 1.3211ms
+[11:57:33.203] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[11:57:33.218] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 14.1938ms
+[11:57:33.269] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/favicon.ico""" - null null
+[11:57:33.270] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/favicon.ico""" - 404 0 null 1.2215ms
+[11:57:33.272] [] [Information] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:7213""""/favicon.ico", Response status code: 404
+[12:06:03.943] [] [Information] Registered 1 endpoints in "371" milliseconds.
+[12:06:04.198] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[12:06:05.137] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[12:06:05.352] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 220.839ms
+[12:06:05.372] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[12:06:05.372] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.css""" - null null
+[12:06:05.378] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 7.3688ms
+[12:06:05.384] [] [Information] Sending file. Request path: '"/index.css"'. Physical path: '"N/A"'
+[12:06:05.385] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.css""" - 200 218 "text/css" 14.6504ms
+[12:06:05.392] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[12:06:05.425] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 33.0767ms
+[12:06:05.534] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[12:06:05.569] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json; charset=utf-8" 34.5406ms
+[12:06:10.585] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[12:06:10.599] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json; charset=utf-8" 14.4354ms
+[12:06:54.677] [] [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - "application/json" 216
+[12:06:54.686] [] [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at lambda_method3(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.DefaultFilesMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[12:06:54.705] [] [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - 500 null "text/plain; charset=utf-8" 27.4719ms
+[12:07:55.523] [] [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - "application/json" 216
+[12:07:55.530] [] [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at lambda_method3(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.DefaultFilesMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[12:07:55.532] [] [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - 500 null "text/plain; charset=utf-8" 9.0354ms
+[12:09:25.051] [] [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - "application/json" 216
+[12:09:25.056] [] [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at lambda_method3(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.DefaultFilesMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[12:09:25.057] [] [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - 500 null "text/plain; charset=utf-8" 6.0307ms
+[12:12:55.519] [] [Information] Registered 1 endpoints in "444" milliseconds.
+[12:12:55.794] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[12:12:56.417] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[12:12:56.665] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 256.6765ms
+[12:12:56.699] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[12:12:56.708] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 9.9954ms
+[12:12:56.713] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[12:12:56.772] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 59.1084ms
+[12:12:56.821] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[12:12:56.848] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json; charset=utf-8" 28.0731ms
+[12:13:05.955] [] [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - "application/json" 216
+[12:13:05.960] [] [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method3(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.DefaultFilesMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[12:13:05.975] [] [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - 500 null "text/plain; charset=utf-8" 20.2297ms
+[12:14:39.682] [] [Information] Registered 1 endpoints in "375" milliseconds.
+[12:14:39.927] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[12:14:40.901] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[12:14:41.135] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html; charset=utf-8" 249.9521ms
+[12:14:41.153] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[12:14:41.160] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 6.9192ms
+[12:14:41.163] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[12:14:41.209] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 45.7243ms
+[12:14:41.252] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[12:14:41.278] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json; charset=utf-8" 26.3758ms
+[12:14:53.426] [] [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - "application/json" 216
+[12:14:53.430] [] [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Swashbuckle.AspNetCore.Swagger.ISwaggerProvider' while attempting to Invoke middleware 'Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware'.
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method3(Closure, Object, HttpContext, IServiceProvider)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.DefaultFilesMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[12:14:53.463] [] [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - 500 null "text/plain; charset=utf-8" 36.6917ms
+[12:18:18.188] [] [Information] Registered 1 endpoints in "266" milliseconds.
+[12:18:18.441] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[12:18:19.391] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - null null
+[12:18:19.613] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 229.424ms
+[12:18:19.644] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[12:18:19.644] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.js""" - null null
+[12:18:19.644] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[12:18:19.648] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/index.js""" - 200 null "application/javascript;charset=utf-8" 5.2466ms
+[12:18:19.666] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 23.0467ms
+[12:18:19.690] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 46.7258ms
+[12:18:19.725] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[12:18:19.732] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 7.3872ms
+[12:22:10.521] [] [Information] Registered 1 endpoints in "427" milliseconds.
+[12:22:10.941] [] [Information] No validators found in the system!
+[12:22:11.305] [] [Information] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+[12:22:12.376] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - null null
+[12:22:12.377] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - null null
+[12:22:12.425] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_framework/aspnetcore-browser-refresh.js""" - 200 16545 "application/javascript; charset=utf-8" 51.1533ms
+[12:22:12.545] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 182.671ms
+[12:22:12.586] [] [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - null null
+[12:22:12.638] [] [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7213""""/swagger/v1/swagger.json""" - 200 null "application/json; charset=utf-8" 52.0159ms
+[12:22:48.923] [] [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - "application/json" 216
+[12:22:48.938] [] [Information] Executing endpoint '"HTTP: POST register"'
+[12:22:55.386] [] [Information] Executed endpoint '"HTTP: POST register"'
+[12:22:55.387] [] [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Nullable object must have a value.
+   at System.Nullable`1.get_Value()
+   at Services.Authentifications.Api.Endpoints.Auth.RegisterEndpoint.HandleAsync(RegisterRequest request, CancellationToken cancellationToken) in C:\Users\y098047\source\repos\Authentification.Api\Services.Authentifications.Api\Endpoints\Auth\RegisterEndpoint.cs:line 22
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at FastEndpoints.Endpoint`2.ExecAsync(CancellationToken ct)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at NSwag.AspNetCore.Middlewares.SwaggerUiIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.RedirectToIndexMiddleware.Invoke(HttpContext context)
+   at NSwag.AspNetCore.Middlewares.OpenApiDocumentMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[12:22:55.406] [] [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7213""""/register""" - 500 null "text/plain; charset=utf-8" 6483.8503ms
