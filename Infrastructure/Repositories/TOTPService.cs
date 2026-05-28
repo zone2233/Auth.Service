@@ -13,8 +13,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-//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
-
 namespace Infrastructure.Repositories
 {
     public class TOTPService() : ITOTPService
